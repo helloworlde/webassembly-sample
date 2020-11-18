@@ -1,0 +1,17 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("wasm/index.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+    </script>
+</head>
+<body>
+<button id="change-button" onclick="hello()">Hello</button>
+<button id="change-button" onclick="changeContent()">Change content</button>
+<h1 id="content"></h1>
+</body>
+</html>
