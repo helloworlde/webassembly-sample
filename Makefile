@@ -16,7 +16,7 @@ run:
 	./main
 
 image:
-	docker build -t webassembly-sample .
+	docker build -t hellowoodes/webassembly-sample .
 
 all:
 	make clean
