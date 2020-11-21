@@ -2,6 +2,14 @@
 
 ## 使用 
 
+- docker
+
+```shell script
+docker run --name webassembly-sample -p 8080:8080 docker.pkg.github.com/helloworlde/webassembly-sample/webassembly-sample:main
+```
+
+- 构建
+
 ```
 git clone https://github.com/helloworlde/webassembly-sample.git
 
@@ -73,3 +81,7 @@ func main() {
 ```
 
 在这个 Server 中，访问 `/` 路径，会指向`static`目录，最终指向 `index.html`文件；在加载 `index.html` 时会引用 `wasm/index.wasm` 文件，通过指定处理路径 `/wasm/`，会从 `wasm`这个文件夹下加载文件
+
+----
+
+- 如果使用 Goland 提示找不到 `syscall/js`，在设置 -> Go -> Build Tags & Vendoring 中选择 OS 为 js, Arch 为 wasm 即可

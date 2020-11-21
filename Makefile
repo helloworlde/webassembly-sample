@@ -15,6 +15,9 @@ copyExec:
 run:
 	./main
 
+image:
+	docker build -t webassembly-sample .
+
 all:
 	make clean
 	make buildIndex
